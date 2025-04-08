@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Sizing</title>
+    <style>
+        .container {
+            border: 5px solid gold;
+            width: 100%;
+            padding: 5px;
+            display: flex;
+            gap: 10px;
+            list-style-type: none;
+        }
+
+        .container li{
+            border: 2px solid rgb(0, 132, 255);
+            flex-basis: 200px; /*flex-basis вказує ширину елемента і буде працювати коректно, навіть якщо буде встановлено властивість width, flex-basis буде її ігнорувати*/
+            width: 100px !important; /* width вказує ширину елемента та не буде працювати якщо буде встановлено властивість flex-basis*/
+            /*max-width: 100px;*/   /* max-width вказує максимальну ширину елемента, тому до елементів він застосується не зважаючи на flex-basis*/
+            /*min-width: 250px;*/   /* min-width вказує мінімальну ширину елемента, тому до елементів він застосується не зважаючи на flex-basis*/
+        }
+
+        .another-container {
+            border: 5px solid gold;
+            width: 100%;
+            padding: 5px;
+            margin-top: 100px;
+            display: flex;
+            gap: 10px;
+            list-style-type: none;
+        }
+
+        .another-container li{
+            border: 2px solid rgb(0, 132, 255);
+            flex-basis: 100px;
+            flex-grow: 1; /* Буде збільшувати ширину елемента відповідно до всієї доступної ширини*/
+            flex-shrink: 1; /* Буде зменшувати ширину елемента відповідно до всієї доступної ширини*/
+            /*flex: 1;*/ /* flex: flex-grow flex-shrink flex-basis;*/
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact Us</li>
+        <li>The Best Programming School in the World</li>
+    </div>
+
+    <div class="another-container">
+        <li>Home</li>
+        <li style="flex: 10;">About</li>
+        <li>Contact Us</li>
+        <li>The Best Programming School in the World</li>
+    </div>
+
+</body>
+</html>
