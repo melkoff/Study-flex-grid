@@ -1,0 +1,2 @@
+Тут можна зіграти в гру використовуючи правильні властивості flex
+https://appbrewery.github.io/flexboxfroggy/#uk
