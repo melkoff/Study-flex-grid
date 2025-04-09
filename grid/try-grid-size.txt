@@ -1,0 +1,2 @@
+Тут можна потренувати сітку grid, і зробити її як приклад з верху
+https://appbrewery.github.io/grid-sizing/test.html
